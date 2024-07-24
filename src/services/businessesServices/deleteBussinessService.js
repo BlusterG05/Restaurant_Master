@@ -1,4 +1,4 @@
-const deleteBusinessModel = require("../../models/businessModels/deleteBusinessModel");
+const deleteBusinessModel = require("../../models/businessesModels/deleteBussinessModel");
 
 const deleteBusinessService = (
   business_id,

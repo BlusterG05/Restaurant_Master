@@ -1,4 +1,4 @@
-const editBusinessModel = require("../../models/businessModels/editBusinessModel");
+const editBusinessModel = require("../../models/businessesModels/editBussinessModel");
 
 const editBusinessService = (
   business_id,

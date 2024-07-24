@@ -1,4 +1,4 @@
-const createBusinessModel = require("../../models/businessModels/createBusinessModel");
+const createBusinessModel = require("../../models/businessesModels/createBussinessModel");
 
 const createBusinessService = (
   business_owner_ced,

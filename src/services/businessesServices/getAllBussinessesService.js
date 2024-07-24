@@ -1,4 +1,4 @@
-const getAllBusinessesModel = require("../../models/businessModels/getAllBusinessesModel");
+const getAllBusinessesModel = require("../../models/businessesModels/getAllBussinessesModel");
 
 const getAllBusinessesService = (callback) => {
   getAllBusinessesModel((err, result) => {
