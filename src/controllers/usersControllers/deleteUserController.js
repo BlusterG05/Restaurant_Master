@@ -14,10 +14,13 @@ const deleteUserController = (req, res) => {
     if (err) {
       return res.status(400).json({ error: err.message });
     }
+    console.log(`Usuario ${req.params.user_ced} eliminado`)
     res
       .status(200)
       .json({ message: "Usuario eliminado exitosamente.", result });
-  });
+  }
+);
+
 };
 
 module.exports = deleteUserController;
