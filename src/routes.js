@@ -7,18 +7,18 @@ const deleteUserRoute = require("./routes/usersRoutes/deleteUserRoute");
 const getUsersRoute = require("./routes/usersRoutes/getUsersRoute");
 const getUserRoute = require("./routes/usersRoutes/getUserRoute");
 
-const createBusinessRoute = require("./routes/businessesRoutes/createBusinessRoute");
-const editBusinessRoute = require("./routes/businessesRoutes/editBusinessRoute");
-const deleteBusinessRoute = require("./routes/businessesRoutes/deleteBusinessRoute");
-const getBusinessesRoute = require("./routes/businessesRoutes/getBusinessesRoute");
+const createBusinessRoute = require("./routes/businessesRoutes/createBussinessRoute");
+const editBusinessRoute = require("./routes/businessesRoutes/editBussinessRoute");
+const deleteBusinessRoute = require("./routes/businessesRoutes/deleteBussinessRoute");
+const getBusinessesRoute = require("./routes/businessesRoutes/getBussinessesRoute");
 
 const createProductRoute = require("./routes/productsRoutes/createProductRoute");
 const editProductRoute = require("./routes/productsRoutes/editProductRoute");
 const deleteProductRoute = require("./routes/productsRoutes/deleteProductRoute");
 const getProductsRoute = require("./routes/productsRoutes/getProductsRoute");
 
-const createMenuRoute = require("./routes/menuRoutes/createMenuRoute");
-const addProductToMenuRoute = require("./routes/menuRoutes/addProductToMenuRoute");
+const createMenuRoute = require("./routes/menusRoutes/createMenuRoute");
+const addProductToMenuRoute = require("./routes/menusRoutes/addProductToMenuRoute");
 
 
 router.use("/v1", createUserRoute);
