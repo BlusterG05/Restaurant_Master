@@ -7,7 +7,7 @@ const deleteUser = (user_ced, password, callback) => {
     if (err) {
       return callback(err);
     }
-    callback(null, results);
+    callback(null, results[0]);
   });
 };
 

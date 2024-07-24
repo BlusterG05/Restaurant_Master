@@ -7,7 +7,7 @@ const getUser = (user_ced, callback) => {
     if (err) {
       return callback(err);
     }
-    callback(null, results);
+    callback(null, results[0]);
   });
 };
 
