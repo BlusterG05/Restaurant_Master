@@ -27,11 +27,12 @@ const createProductController = (req, res) => {
     is_featured,
     (err, result) => {
       if (err) {
+        console.log({error: err.message})
         return res.status(400).json({ error: err.message });
       }
       res
         .status(201)
-        .json({ message: "Producto creado exitosamente.", data: result });
+        .json({ message: "Producto creado exitosamente.", result });
     }
   );
 };

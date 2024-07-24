@@ -9,7 +9,7 @@ const editUserController = (req, res) => {
     }
     res
       .status(200)
-      .json({ message: "Usuario editado exitosamente.", data: result });
+      .json({ message: "Usuario editado exitosamente.", result });
   });
 };
 

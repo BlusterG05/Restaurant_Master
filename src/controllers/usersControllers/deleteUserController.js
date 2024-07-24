@@ -16,7 +16,7 @@ const deleteUserController = (req, res) => {
     }
     res
       .status(200)
-      .json({ message: "Usuario eliminado exitosamente.", data: result });
+      .json({ message: "Usuario eliminado exitosamente.", result });
   });
 };
 

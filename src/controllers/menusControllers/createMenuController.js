@@ -1,4 +1,4 @@
-const createMenuService = require("../../services/menuServices/createMenuService");
+const createMenuService = require("../../services/menusServices/createMenuService");
 
 const createMenuController = (req, res) => {
   const {
@@ -21,11 +21,12 @@ const createMenuController = (req, res) => {
     is_featured,
     (err, result) => {
       if (err) {
+        console.log({error: err.message})
         return res.status(400).json({ error: err.message });
       }
       res
         .status(201)
-        .json({ message: "Menú creado exitosamente.", data: result });
+        .json({ message: "Menú creado exitosamente.", result });
     }
   );
 };

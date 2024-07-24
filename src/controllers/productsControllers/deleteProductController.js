@@ -20,11 +20,13 @@ const deleteProductController = (req, res) => {
     password,
     (err, result) => {
       if (err) {
+        console.log({error: err.message})
         return res.status(400).json({ error: err.message });
       }
+      console.log(`Producto ${res.product_id} eliminado`)
       res
         .status(200)
-        .json({ message: "Producto eliminado exitosamente.", data: result });
+        .json({ message: "Producto eliminado exitosamente.", result });
     }
   );
 };

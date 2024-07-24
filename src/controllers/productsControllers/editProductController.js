@@ -33,7 +33,7 @@ const editProductController = (req, res) => {
       }
       res
         .status(200)
-        .json({ message: "Producto editado exitosamente.", data: result });
+        .json({ message: "Producto editado exitosamente.", result });
     }
   );
 };

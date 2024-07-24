@@ -5,7 +5,7 @@ const getAllProductsWithDetailsController = (req, res) => {
     if (err) {
       return res.status(400).json({ error: err.message });
     }
-    res.status(200).json({ data: result });
+    res.status(200).json({ result });
   });
 };
 

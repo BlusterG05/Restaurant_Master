@@ -1,4 +1,4 @@
-const createBusinessService = require("../../services/businessServices/createBusinessService");
+const createBusinessService = require("../../services/businessesServices/createBussinessService");
 
 const createBusinessController = (req, res) => {
   const {
@@ -31,7 +31,7 @@ const createBusinessController = (req, res) => {
       }
       res
         .status(201)
-        .json({ message: "Negocio creado exitosamente.", data: result });
+        .json({ message: "Negocio creado exitosamente.", result });
     }
   );
 };

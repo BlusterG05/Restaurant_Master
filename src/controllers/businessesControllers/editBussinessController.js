@@ -1,4 +1,4 @@
-const editBusinessService = require("../../services/businessServices/editBusinessService");
+const editBusinessService = require("../../services/businessesServices/editBussinessService");
 
 const editBusinessController = (req, res) => {
   const { business_id } = req.params;
@@ -33,7 +33,7 @@ const editBusinessController = (req, res) => {
       }
       res
         .status(200)
-        .json({ message: "Negocio editado exitosamente.", data: result });
+        .json({ message: "Negocio editado exitosamente.", result });
     }
   );
 };

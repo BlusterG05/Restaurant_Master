@@ -1,4 +1,4 @@
-const deleteBusinessService = require("../../services/businessServices/deleteBusinessService");
+const deleteBusinessService = require("../../services/businessesServices/deleteBussinessService");
 
 const deleteBusinessController = (req, res) => {
   const { business_id } = req.params;
@@ -23,7 +23,7 @@ const deleteBusinessController = (req, res) => {
       }
       res
         .status(200)
-        .json({ message: "Negocio eliminado exitosamente.", data: result });
+        .json({ message: "Negocio eliminado exitosamente.", result });
     }
   );
 };
