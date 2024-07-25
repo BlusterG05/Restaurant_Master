@@ -1,21 +1,22 @@
-const { query } = require('../../db/config');
+const { query } = require('../../db/promise_config');
 
 const getBusinessUser = async (email) => {
-  console.log('Serching email :', email);
+    console.log('Serching email :', email);
 
-  if (!email || typeof email !== 'string') {
-    throw new Error('Invalid email provided');
-  }
+    if (!email || typeof email !== 'string') {
+        throw new Error('Invalid email provided');
+    }
 
-  const sql = `SELECT user_ced, user_name, user_mail, password, user_plan FROM users WHERE user_mail = ?;`;
+    const sql = `SELECT user_ced, user_name, user_mail, password, user_plan FROM users WHERE user_mail = ?;`;
 
-  try {
+      try {
     const res = await query(sql, [email]);
     return res;
   } catch (err) {
     console.error('Error in query execution:', err.message);
     throw new Error('Error fetching email: ' + err.message);
   }
+
 };
 
 // getBusinessUser('jerycohe05@gmail.com')
