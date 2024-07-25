@@ -20,6 +20,11 @@ const getProductsRoute = require("./routes/productsRoutes/getProductsRoute");
 const createMenuRoute = require("./routes/menusRoutes/createMenuRoute");
 const addProductToMenuRoute = require("./routes/menusRoutes/addProductToMenuRoute");
 
+const loginRoute = require("./routes/usersRoutes/loginRoute")
+
+const authenticateUser = require('./middlewares/authenticateUsers')
+
+router.use("/v1",loginRoute);
 
 router.use("/v1", createUserRoute);
 router.use("/v1", editUserRoute);
