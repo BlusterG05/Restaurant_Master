@@ -29,7 +29,7 @@ router.use("/v1",loginRoute);
 router.use("/v1", createUserRoute);
 router.use("/v1", editUserRoute);
 router.use("/v1", deleteUserRoute);
-router.use("/v1", getUsersRoute);
+router.use("/v1",authenticateUser, getUsersRoute);
 router.use("/v1", getUserRoute);
 
 

@@ -1,4 +1,5 @@
 const createUserModel = require("../../models/usersModels/createUserModel");
+const bcrypt  = require('bcrypt')
 
 const createUserService = (user, callback) => {
   // Validación de datos de entrada
