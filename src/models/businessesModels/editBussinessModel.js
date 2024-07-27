@@ -29,7 +29,7 @@ const editBusiness = (
       business_desc,
       business_slogan,
       business_main_pic_url,
-      business_portrait_pic,
+      //business_portrait_pic,
     ],
     (err, results) => {
       if (err) {
