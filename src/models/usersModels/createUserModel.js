@@ -1,5 +1,5 @@
 const db = require("../../db/config");
-const bcrypt = require('bcrypt');
+const bcrypt = require('bcryptjs');
 
 const createUser = async (user, callback) => {
   try {
