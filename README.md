@@ -279,7 +279,7 @@ Esta API está actualmente en la versión 1. Al hacer solicitudes, anteponga tod
 Para cualquier consulta o soporte, por favor contacte a nuestro equipo en api-soporte@restmaster.com.
 
 ## Documentación API
-[[Enlace o instrucciones para acceder a la documentación completa de la API](https://documenter.getpostman.com/view/32978477/2sA3kXFMBm)]
+Revisa la documentacion completa [Aqui](https://documenter.getpostman.com/view/32978477/2sA3kXFMBm)
 
 ## Seguridad
 - Almacenamiento seguro de contraseñas con hashing
