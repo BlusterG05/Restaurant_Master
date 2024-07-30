@@ -1,9 +1,11 @@
 # Rest Master Backend
 
 ## Descripción
+
 Rest Master es un backend robusto y escalable diseñado para gestionar un ecosistema completo de usuarios, negocios, productos y reservaciones. Construido con Node.js, Express y MySQL, ofrece una API RESTful segura y eficiente.
 
 ## Características Principales
+
 - Autenticación robusta con JWT
 - Operaciones CRUD completas para usuarios, negocios, productos y reservaciones
 - Asociaciones flexibles entre entidades
@@ -11,13 +13,15 @@ Rest Master es un backend robusto y escalable diseñado para gestionar un ecosis
 - Gestión de datos rica, incluyendo almacenamiento de imágenes y metadatos
 
 ## Tecnologías Utilizadas
+
 - Node.js
 - Express.js
 - MySQL
 - JSON Web Tokens (JWT)
 
 ## Estructura del Proyecto
-```
+
+```bash
 Restaurant_Master/
 │
 ├── src/
@@ -62,31 +66,42 @@ Restaurant_Master/
 ```
 
 ## Instalación
+
 1. Clona el repositorio:
-   ```
+
+   ``` bash
    git clone https://github.com/BlusterG05/Restaurant_Master.git
    ```
+
 2. Instala las dependencias:
-   ```
+
+   ``` bash
+
    cd Restaurant_Master
    npm install
    ```
+
 3. Configura las variables de entorno:
    - Copia `.env.example` a `.env`
    - Edita `.env` con tus configuraciones
 
 4. Inicia el servidor:
-   ```
+
+   ``` node
    node ./src/app.js
    ```
 
 ## Uso
+
 ### URL Base
+
 Todos los endpoints son relativos a: `http://localhost:3000/api/v1`
 
 ### Autenticación
+
 La mayoría de los endpoints requieren un token JWT. Inclúyelo en el encabezado de Autorización:
-```
+
+``` cURL
 Authorization: Bearer <tu_token_aquí>
 ```
 
@@ -95,11 +110,12 @@ Authorization: Bearer <tu_token_aquí>
 #### Usuarios
 
 ##### Obtener Todos los Usuarios
+
 - **URL**: `/users`
 - **Método**: `GET`
 - **Autenticación requerida**: Sí
 - **Permisos requeridos**: Ninguno
-- **Respuesta Exitosa**: 
+- **Respuesta Exitosa**:
   - **Código**: 200
   - **Contenido**: Array de objetos de usuario
 - **Respuesta de Error**:
@@ -107,11 +123,13 @@ Authorization: Bearer <tu_token_aquí>
   - **Contenido**: `{ "error": "Acceso no autorizado" }`
 
 ##### Crear Usuario
+
 - **URL**: `/users`
 - **Método**: `POST`
 - **Autenticación requerida**: Sí
 - **Permisos requeridos**: Admin
 - **Restricciones de datos**:
+
 ```json
 {
   "user_ced": "[cédula válida]",
@@ -122,7 +140,9 @@ Authorization: Bearer <tu_token_aquí>
   "password": "[contraseña en texto plano]"
 }
 ```
+
 - **Respuesta Exitosa**:
+
   - **Código**: 201
   - **Contenido**: `{ "mensaje": "Usuario creado exitosamente", "userId": 12345 }`
 - **Respuesta de Error**:
@@ -130,9 +150,11 @@ Authorization: Bearer <tu_token_aquí>
   - **Contenido**: `{ "error": "Datos de entrada inválidos" }`
 
 ##### Obtener Usuario por ID
+
 - **URL**: `/users/:id`
 - **Método**: `GET`
-- **Parámetros de URL**: 
+- **Parámetros de URL**:
+
   - **Requerido**: `id=[entero]`
 - **Autenticación requerida**: Sí
 - **Permisos requeridos**: Usuario propio o Admin
@@ -146,10 +168,12 @@ Authorization: Bearer <tu_token_aquí>
 #### Reservaciones
 
 ##### Crear Reservación
+
 - **URL**: `/reservation`
 - **Método**: `POST`
 - **Autenticación requerida**: Sí
 - **Restricciones de datos**:
+
 ```json
 {
   "reservationType": "[lugar o detallada]",
@@ -169,6 +193,7 @@ Authorization: Bearer <tu_token_aquí>
   ]
 }
 ```
+
 - **Respuesta Exitosa**:
   - **Código**: 201
   - **Contenido**: `{ "mensaje": "Reservación creada exitosamente", "reservationId": 67890 }`
@@ -179,6 +204,7 @@ Authorization: Bearer <tu_token_aquí>
 #### Negocios
 
 ##### Obtener Negocios por Usuario
+
 - **URL**: `/businesses/:userId`
 - **Método**: `GET`
 - **Parámetros de URL**:
@@ -207,6 +233,7 @@ Las llamadas a la API están limitadas a 100 solicitudes por hora por dirección
 ### Modelos de Datos
 
 #### Usuario
+
 ```json
 {
   "id": "entero",
@@ -220,6 +247,7 @@ Las llamadas a la API están limitadas a 100 solicitudes por hora por dirección
 ```
 
 #### Negocio
+
 ```json
 {
   "id": "entero",
@@ -237,6 +265,7 @@ Las llamadas a la API están limitadas a 100 solicitudes por hora por dirección
 ```
 
 #### Reservación
+
 ```json
 {
   "id": "entero",
@@ -259,6 +288,7 @@ Las llamadas a la API están limitadas a 100 solicitudes por hora por dirección
 ```
 
 #### Producto
+
 ```json
 {
   "id": "entero",
@@ -276,12 +306,14 @@ Esta API está actualmente en la versión 1. Al hacer solicitudes, anteponga tod
 
 ### Soporte
 
-Para cualquier consulta o soporte, por favor contacte a nuestro equipo en api-soporte@restmaster.com.
+Para cualquier consulta o soporte, por favor contacte a nuestro equipo en <api-soporte@restmaster.com>.
 
 ## Documentación API
+
 Revisa la documentacion completa [Aqui](https://documenter.getpostman.com/view/32978477/2sA3kXFMBm)
 
 ## Seguridad
+
 - Almacenamiento seguro de contraseñas con hashing
 - Autenticación basada en tokens JWT
 - Controles de acceso para proteger datos sensibles
